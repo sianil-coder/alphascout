@@ -1,0 +1,319 @@
+{
+  "delisted_or_invalid_tickers": {
+    "TWTR": "Twitter (TWTR) was delisted following its acquisition in October 2022. Suggest analyzing peer social media equities such as 'META', 'SNAP', or 'PINS'.",
+    "FB": "Facebook changed its corporate ticker from 'FB' to 'META' (Meta Platforms, Inc.). Retry calling the tool with ticker='META'.",
+    "GOOG_OLD": "Invalid ticker symbol. Use 'GOOGL' or 'GOOG' for Alphabet Inc."
+  },
+  "fundamentals_snapshot": {
+    "NVDA": {
+      "company_name": "NVIDIA Corporation",
+      "sector": "Technology - Semiconductors",
+      "current_price": 138.50,
+      "market_cap_billions": 3390.0,
+      "trailing_pe": 54.5,
+      "forward_pe": 31.8,
+      "ev_to_ebitda": 44.2,
+      "trailing_eps": 2.54,
+      "revenue_growth_yoy_pct": 93.6,
+      "gross_margin_pct": 75.1,
+      "operating_margin_pct": 62.4,
+      "free_cash_flow_billions": 58.9,
+      "total_debt_to_equity": 17.2,
+      "beta": 1.65,
+      "fifty_two_week_high": 149.76,
+      "fifty_two_week_low": 75.60,
+      "analyst_target_mean": 168.00
+    },
+    "AMD": {
+      "company_name": "Advanced Micro Devices, Inc.",
+      "sector": "Technology - Semiconductors",
+      "current_price": 152.20,
+      "market_cap_billions": 246.3,
+      "trailing_pe": 108.7,
+      "forward_pe": 28.4,
+      "ev_to_ebitda": 36.1,
+      "trailing_eps": 1.40,
+      "revenue_growth_yoy_pct": 17.6,
+      "gross_margin_pct": 50.2,
+      "operating_margin_pct": 21.8,
+      "free_cash_flow_billions": 2.4,
+      "total_debt_to_equity": 4.5,
+      "beta": 1.69,
+      "fifty_two_week_high": 227.30,
+      "fifty_two_week_low": 130.15,
+      "analyst_target_mean": 185.00
+    },
+    "AVGO": {
+      "company_name": "Broadcom Inc.",
+      "sector": "Technology - Semiconductors",
+      "current_price": 176.40,
+      "market_cap_billions": 824.0,
+      "trailing_pe": 68.2,
+      "forward_pe": 29.5,
+      "ev_to_ebitda": 33.8,
+      "trailing_eps": 2.59,
+      "revenue_growth_yoy_pct": 47.0,
+      "gross_margin_pct": 74.8,
+      "operating_margin_pct": 58.1,
+      "free_cash_flow_billions": 21.6,
+      "total_debt_to_equity": 102.4,
+      "beta": 1.24,
+      "fifty_two_week_high": 185.16,
+      "fifty_two_week_low": 118.50,
+      "analyst_target_mean": 195.00
+    },
+    "MSFT": {
+      "company_name": "Microsoft Corporation",
+      "sector": "Technology - Cloud & Software",
+      "current_price": 428.15,
+      "market_cap_billions": 3180.0,
+      "trailing_pe": 35.4,
+      "forward_pe": 29.1,
+      "ev_to_ebitda": 24.8,
+      "trailing_eps": 12.09,
+      "revenue_growth_yoy_pct": 16.0,
+      "gross_margin_pct": 69.8,
+      "operating_margin_pct": 44.6,
+      "free_cash_flow_billions": 74.1,
+      "total_debt_to_equity": 33.5,
+      "beta": 0.90,
+      "fifty_two_week_high": 468.35,
+      "fifty_two_week_low": 385.58,
+      "analyst_target_mean": 495.00
+    },
+    "AAPL": {
+      "company_name": "Apple Inc.",
+      "sector": "Technology - Consumer Hardware & Services",
+      "current_price": 231.40,
+      "market_cap_billions": 3520.0,
+      "trailing_pe": 34.8,
+      "forward_pe": 28.2,
+      "ev_to_ebitda": 25.9,
+      "trailing_eps": 6.65,
+      "revenue_growth_yoy_pct": 6.1,
+      "gross_margin_pct": 46.2,
+      "operating_margin_pct": 31.5,
+      "free_cash_flow_billions": 108.8,
+      "total_debt_to_equity": 145.0,
+      "beta": 1.24,
+      "fifty_two_week_high": 237.23,
+      "fifty_two_week_low": 164.08,
+      "analyst_target_mean": 248.00
+    }
+  },
+  "sec_10k_filings": {
+    "NVDA": [
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 1A. Risk Factors - Supply Chain & Foundry Concentration",
+        "content": "We do not manufacture the semiconductor wafers used for our GPU and AI data center products. We rely heavily on Taiwan Semiconductor Manufacturing Company (TSMC) and CoWoS advanced packaging capacity. Any geopolitical disruption in the Taiwan Strait, natural disaster, or advanced packaging bottleneck could materially restrict our ability to meet hyperscaler Blackwell/Rubin demand."
+      },
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 1A. Risk Factors - US Export Controls & Customer Concentration",
+        "content": "The U.S. Department of Commerce Bureau of Industry and Security (BIS) has imposed licensing requirements and performance density thresholds on exports of advanced AI accelerators (such as H100, H200, and B200) to China and certain Middle Eastern regions. Additionally, our top 4 cloud hyperscaler customers accounted for approximately 46% of total Data Center revenue; any moderation in hyperscaler AI capital expenditures could adversely impact revenue growth."
+      },
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 7. MD&A - Data Center & Blackwell Architecture Ramp",
+        "content": "Data Center revenue increased 142% year-over-year driven by generative AI training and inference demand for Hopper H200 and the initial production ramp of Blackwell GPU rack-scale systems. Gross margins remained above 74%, though initial Blackwell systems carry higher bill-of-materials costs during early yield optimization."
+      }
+    ],
+    "AMD": [
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 1A. Risk Factors - AI Software Ecosystem & Competition",
+        "content": "In the Data Center AI accelerator market, we face entrenched competition from NVIDIA's proprietary CUDA software ecosystem and networking fabric. While our Instinct MI300X and MI325X GPUs and ROCm open software stack have gained hyperscaler adoption, delays in software parity or next-generation rack architectures could limit market share expansion."
+      },
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 7. MD&A - Segment Performance (Data Center vs. Embedded/Gaming)",
+        "content": "Data Center segment revenue grew 82% year-over-year led by Instinct MI300 GPU deployments and EPYC server CPU share gains, partially offset by cyclical inventory digestion in the Embedded (Xilinx) and semi-custom Gaming console segments."
+      }
+    ],
+    "MSFT": [
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 1A. Risk Factors - Cloud Infrastructure Capital Intensity & AI Capex",
+        "content": "We are making multi-billion-dollar capital expenditure commitments ($55B+ annual run-rate) for AI data centers, GPU clusters, and nuclear/renewable power procurement. If enterprise monetization of Microsoft 365 Copilot and Azure OpenAI services lags the 4-to-6-year depreciation schedule of our server and networking investments, cloud gross margins and consolidated operating margins could face near-term compression."
+      },
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 7. MD&A - Intelligent Cloud & Azure AI Revenue Contribution",
+        "content": "Intelligent Cloud revenue increased 20% year-over-year, with Azure and other cloud services growing 31%, including 12 percentage points of growth directly attributable to Azure AI services. Commercial remaining performance obligations (RPO) reached $269 billion (+19% YoY), though Microsoft Cloud gross margin decreased slightly by 100 bps to 70% due to scaling AI infrastructure."
+      },
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 1A. Risk Factors - Cybersecurity, Regulatory & Antitrust Scrutiny",
+        "content": "Global regulators including the FTC, European Commission, and UK CMA are examining cloud licensing practices, strategic AI partnerships (including OpenAI), and enterprise bundling of Teams and security suites. Adverse regulatory remedies could restrict commercial bundling flexibility."
+      }
+    ],
+    "AAPL": [
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 1A. Risk Factors - Antitrust & App Store Regulatory Scrutiny (EU DMA & DOJ)",
+        "content": "We are subject to the European Union Digital Markets Act (DMA) and U.S. Department of Justice antitrust litigation challenging App Store commission structures, third-party payment steering, and ecosystem exclusivity. Adverse rulings or forced fee reductions could materially impact high-margin Services revenue."
+      },
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 7. MD&A - Services Gross Margin Expansion vs. Products Cycle",
+        "content": "Services revenue reached an all-time record of $96.2 billion (+13% YoY) with a 73.9% segment gross margin, lifting consolidated gross margin to 46.2%. Products revenue grew modestly as iPhone upgrade cycles awaited the global rollout of Apple Intelligence on-device AI features across non-English locales."
+      },
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 1A. Risk Factors - Greater China Revenue & Supply Chain Concentration",
+        "content": "Greater China accounts for approximately 17% of total net sales, where we face intensifying domestic smartphone competition and localized data privacy compliance requirements for cloud AI partners. Additionally, final assembly remains heavily concentrated in Asia."
+      }
+    ],
+    "AVGO": [
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 7. MD&A - Custom AI XPU Accelerators & VMware Software Integration",
+        "content": "Semiconductor solutions AI revenue surged over 220% YoY to $12.2 billion driven by custom AI ASICs (XPUs) for three hyperscale consumer AI platform customers and Tomahawk 5 Ethernet AI networking switches. Infrastructure Software revenue expanded following the transition of VMware enterprise customers to VMware Cloud Foundation (VCF) subscriptions."
+      },
+      {
+        "filing_type": "Form 10-K",
+        "fiscal_period": "FY2025",
+        "section": "Item 1A. Risk Factors - Hyperscaler Custom ASIC Concentration & Acquisition Leverage",
+        "content": "Custom AI accelerator revenue is concentrated among a small number of hyperscaler customers. Additionally, total consolidated debt increased following the VMware acquisition (Debt/Equity 102.4%), requiring disciplined free cash flow allocation toward deleveraging."
+      }
+    ]
+  },
+  "insider_form4_transactions": {
+    "NVDA": {
+      "net_sentiment": "NEUTRAL_PLANNED_SALES",
+      "open_market_buys_count": 1,
+      "open_market_sells_count": 4,
+      "Rule_10b5_1_planned_pct": 92.0,
+      "notable_transactions": [
+        {
+          "insider_name": "Jensen Huang (CEO)",
+          "transaction_type": "Sale (Rule 10b5-1 Pre-Scheduled Plan)",
+          "shares": 120000,
+          "avg_price_usd": 135.40,
+          "notes": "Executed automatically under a Rule 10b5-1 trading plan adopted in March; represents <0.2% of total beneficial ownership."
+        },
+        {
+          "insider_name": "Mark Stevens (Director)",
+          "transaction_type": "Open Market Purchase",
+          "shares": 15000,
+          "avg_price_usd": 128.90,
+          "notes": "Discretionary director accumulation following data center guidance expansion."
+        }
+      ],
+      "earnings_surprise_last_4q_avg_pct": 8.7
+    },
+    "AMD": {
+      "net_sentiment": "MODERATE_INSIDER_ACCUMULATION",
+      "open_market_buys_count": 2,
+      "open_market_sells_count": 2,
+      "Rule_10b5_1_planned_pct": 100.0,
+      "notable_transactions": [
+        {
+          "insider_name": "Lisa Su (Chair & CEO)",
+          "transaction_type": "Sale (Rule 10b5-1 Option Exercise)",
+          "shares": 45000,
+          "avg_price_usd": 155.10,
+          "notes": "Routine pre-scheduled option exercise prior to expiration."
+        }
+      ],
+      "earnings_surprise_last_4q_avg_pct": 3.2
+    },
+    "MSFT": {
+      "net_sentiment": "POSITIVE_LONG_TERM_RETENTION",
+      "open_market_buys_count": 1,
+      "open_market_sells_count": 2,
+      "Rule_10b5_1_planned_pct": 100.0,
+      "notable_transactions": [
+        {
+          "insider_name": "Satya Nadella (Chair & CEO)",
+          "transaction_type": "Tax-Withholding RSU Vesting (Rule 10b5-1)",
+          "shares": 18500,
+          "avg_price_usd": 422.80,
+          "notes": "Automated tax-withholding disposition upon annual performance RSU vesting; retains >98% of core equity holdings."
+        },
+        {
+          "insider_name": "Emma Walmsley (Independent Director)",
+          "transaction_type": "Open Market Purchase",
+          "shares": 2400,
+          "avg_price_usd": 414.50,
+          "notes": "Open-market board member share accumulation following Azure AI RPO disclosure."
+        }
+      ],
+      "earnings_surprise_last_4q_avg_pct": 5.4
+    },
+    "AAPL": {
+      "net_sentiment": "NEUTRAL_SCHEDULED_VESTING",
+      "open_market_buys_count": 1,
+      "open_market_sells_count": 3,
+      "Rule_10b5_1_planned_pct": 95.0,
+      "notable_transactions": [
+        {
+          "insider_name": "Tim Cook (CEO)",
+          "transaction_type": "Sale (Rule 10b5-1 Annual RSU Vest)",
+          "shares": 223986,
+          "avg_price_usd": 226.40,
+          "notes": "Pre-scheduled October performance RSU vest sale pursuant to Rule 10b5-1 plan adopted in November of prior year."
+        },
+        {
+          "insider_name": "Arthur Levinson (Chair of the Board)",
+          "transaction_type": "Charitable Gift & Retention",
+          "shares": 10000,
+          "avg_price_usd": 229.10,
+          "notes": "Maintains over 4.1 million shares of direct beneficial ownership."
+        }
+      ],
+      "earnings_surprise_last_4q_avg_pct": 4.1
+    },
+    "AVGO": {
+      "net_sentiment": "STRONG_ALIGNMENT_AI_INCENTIVES",
+      "open_market_buys_count": 1,
+      "open_market_sells_count": 2,
+      "Rule_10b5_1_planned_pct": 100.0,
+      "notable_transactions": [
+        {
+          "insider_name": "Hock Tan (President & CEO)",
+          "transaction_type": "Long-Term AI PSU Retention Agreement",
+          "shares": 50000,
+          "avg_price_usd": 172.00,
+          "notes": "CEO equity compensation tied directly to achieving $15B-$20B AI semiconductor revenue milestones through FY2027."
+        }
+      ],
+      "earnings_surprise_last_4q_avg_pct": 4.9
+    }
+  },
+  "paper_portfolio_ledger": {
+    "client_profile": {
+      "account_id": "ACC-8841-9920",
+      "client_email": "john.smith@example.com",
+      "tax_ssn": "123-45-6789",
+      "risk_tolerance": "GROWTH_MODERATE",
+      "max_single_trade_risk_pct": 2.5
+    },
+    "cash_balance_usd": 100000.00,
+    "total_portfolio_equity_usd": 125000.00,
+    "positions": {
+      "MSFT": {
+        "shares": 35,
+        "avg_cost_usd": 405.00
+      },
+      "AAPL": {
+        "shares": 45,
+        "avg_cost_usd": 218.00
+      }
+    },
+    "order_history": []
+  }
+}
