@@ -43,7 +43,7 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AlphaScout | Autonomous Equity Research & Paper Brokerage ADK Agent</title>
+  <title>AlphaScout | Autonomous Equity Research &amp; Agentic Trading</title>
   <style>
     :root {
       --bg: #0b0f19;
@@ -301,9 +301,9 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
 <body>
   <header>
     <div>
-      <h1>AlphaScout — Autonomous Equity Research, SEC Filing & Paper Brokerage Agent</h1>
+      <h1>AlphaScout — Autonomous Equity Research &amp; Agentic Trading</h1>
       <div style="font-size:0.78rem;color:var(--muted);">
-        Step 1: Multi-Agent Research & Analyst Report (Live Market Feed + SEC 10-K/Form 4) &rarr; Step 2: Human Authorization &rarr; Paper Order Fill
+        Multi-Agent Analyst Research &rarr; Human-Authorized Trade Execution
       </div>
     </div>
     <span class="badge" id="projectBadge">GCP Project: Loading...</span>

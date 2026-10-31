@@ -22,7 +22,7 @@ from alphascout.observability.telemetry import (
 
 def main() -> int:
     print("=" * 78)
-    print("  ALPHASCOUT: Autonomous Equity Research, SEC Analyst & Paper Brokerage")
+    print("  ALPHASCOUT: Autonomous Equity Research & Agentic Trading")
     print("=" * 78)
 
     sample_query = (

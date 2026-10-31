@@ -1,4 +1,4 @@
-# AlphaScout: Autonomous Equity Research, SEC Filing Analyst & Paper Brokerage Agent
+# AlphaScout: Autonomous Equity Research & Agentic Trading
 
 **AlphaScout** is an institutional-grade multi-agent financial research and paper-execution system built with the **Google Agent Development Kit (ADK-Python)** and **Vertex AI (`gemini-2.5-pro` & `gemini-2.5-flash`)**.
 

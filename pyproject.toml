@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "alphascout"
 version = "1.0.0"
-description = "AlphaScout: Autonomous Equity Research, SEC Filing Analyst & Paper Brokerage Agent built with Google ADK"
+description = "AlphaScout: Autonomous Equity Research & Agentic Trading built with Google ADK"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
