@@ -83,12 +83,9 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
       font-weight: 600;
     }
     .container {
-      max-width: 1320px;
-      margin: 20px auto;
+      max-width: 1080px;
+      margin: 24px auto;
       padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 20px;
     }
     .card {
       background: var(--card);
@@ -388,21 +385,6 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
         </details>
       </div>
     </div>
-
-    <div class="no-print">
-      <div class="card">
-        <h2>
-          <span>Paper Brokerage Portfolio ($100k Sandbox)</span>
-          <button class="btn-outline" style="padding:4px 10px;font-size:0.75rem;" onclick="resetLedger()">Reset $100k</button>
-        </h2>
-        <pre id="portfolioOutput">Loading portfolio state...</pre>
-      </div>
-
-      <div class="card">
-        <h2>OpenTelemetry Spans &amp; PII-Redacted Audit Logs</h2>
-        <pre id="telemetryOutput">Waiting for agent execution...</pre>
-      </div>
-    </div>
   </div>
 
   <script>
@@ -416,15 +398,9 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
     }
 
     async function refreshStatus() {
-      const res = await fetch('/api/telemetry');
+      const res = await fetch('/healthz');
       const data = await res.json();
       document.getElementById('projectBadge').textContent = 'GCP Project: ' + data.project_id;
-      document.getElementById('portfolioOutput').textContent = JSON.stringify(data.portfolio_ledger, null, 2);
-      document.getElementById('telemetryOutput').textContent = JSON.stringify({
-        otel_spans_count: data.otel_spans_count,
-        recent_spans: data.recent_spans,
-        intent_vs_outcome_audit_logs: data.audit_logs.slice(-6)
-      }, null, 2);
     }
 
     function renderVisualReport(data) {
@@ -470,7 +446,7 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
         `<span style="background:rgba(56,189,248,0.16);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);padding:2px 8px;border-radius:999px;font-size:0.72rem;font-weight:600;">${t}</span>`
       ).join(' ');
       const queryInsightsHtml = (inst.direct_query_insights || []).map(q =>
-        `<div style="margin-top:6px;font-size:0.84rem;color:#e2e8f0;line-height:1.5;">${q.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>')}</div>`
+        `<div style="margin-top:6px;font-size:0.84rem;color:#e2e8f0;line-height:1.5;">${q.replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>').replace(/\\*(.*?)\\*/g, '<em>$1</em>')}</div>`
       ).join('');
 
       // Peer Comps Table Rows
@@ -907,7 +883,7 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
 
       const focusTags = (inst.detected_focus_tags || []).map(t => `<span class="tag">${t}</span>`).join(' ');
       const queryInsights = (inst.direct_query_insights || []).map(q =>
-        `<p style="margin:6px 0;">${q.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>')}</p>`
+        `<p style="margin:6px 0;">${q.replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>').replace(/\\*(.*?)\\*/g, '<em>$1</em>')}</p>`
       ).join('');
       const catalystItems = (inst.catalysts_and_drivers || []).map(x => `<li>${x}</li>`).join('');
       const bullItems = (r.bull_case_summary || []).map(x => `<li>${x}</li>`).join('');
@@ -1230,13 +1206,6 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
           <strong style="color:var(--green);">Golden Dataset Evaluation Passed: ${data.passed_cases}/${data.total_cases} (${data.pass_rate_pct}%)</strong>
           <pre style="margin-top:10px;">${JSON.stringify(data, null, 2)}</pre>
         </div>`;
-      await refreshStatus();
-    }
-
-    async function resetLedger() {
-      await fetch('/api/reset_ledger', {method: 'POST'});
-      document.getElementById('orderReceiptCard').style.display = 'none';
-      await refreshStatus();
     }
 
     refreshStatus();
