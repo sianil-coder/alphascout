@@ -398,9 +398,14 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
     }
 
     async function refreshStatus() {
-      const res = await fetch('/healthz');
-      const data = await res.json();
-      document.getElementById('projectBadge').textContent = 'GCP Project: ' + data.project_id;
+      try {
+        const res = await fetch('/api/health');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data.project_id) {
+          document.getElementById('projectBadge').textContent = 'GCP Project: ' + data.project_id;
+        }
+      } catch (e) {}
     }
 
     function renderVisualReport(data) {
@@ -863,7 +868,7 @@ _DASHBOARD_HTML = """<!DOCTYPE html>
       md += `- **Sizing Rationale:** ${s.sizing_rationale || ''}\n`;
       if (lastReportData.executed_receipt) {
         const rec = lastReportData.executed_receipt;
-        md += `- **Executed Paper Order Receipt:** Order ID \`${rec.order_id}\` — FILLED BUY ${rec.quantity} shares @ $${Number(rec.filled_avg_price).toFixed(2)} ($${Number(rec.notional_value_usd).toLocaleString()} total; Remaining Cash: $${Number(rec.remaining_cash_usd).toLocaleString()})\n`;
+        md += `- **Executed Paper Order Receipt:** Order ID \\`${rec.order_id}\\` — FILLED BUY ${rec.quantity} shares @ $${Number(rec.filled_avg_price).toFixed(2)} ($${Number(rec.notional_value_usd).toLocaleString()} total; Remaining Cash: $${Number(rec.remaining_cash_usd).toLocaleString()})\n`;
       }
       md += `\n---\n*${r.compliance_disclaimer || ''}*\n`;
 
@@ -1240,9 +1245,14 @@ class AlphaScoutRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
         if parsed.path in ("/", "/index.html"):
-            self._send_html(_DASHBOARD_HTML)
+            cfg = AlphaScoutConfig()
+            rendered = _DASHBOARD_HTML.replace(
+                "GCP Project: Loading...",
+                f"GCP Project: {cfg.project_id}",
+            )
+            self._send_html(rendered)
             return
-        if parsed.path == "/healthz":
+        if parsed.path in ("/api/health", "/healthz"):
             cfg = AlphaScoutConfig()
             self._send_json(
                 {
